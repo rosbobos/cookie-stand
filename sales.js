@@ -1,4 +1,5 @@
 //stores the min/max hourly customers with the average cookie sales
+'use strict';
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var table = document.getElementById('target');
 SalesPerLocation.all = [];
@@ -96,4 +97,16 @@ footerRow();
 
 function getRandom(minCust, maxCust){
   return Math.floor(Math.random()*(maxCust-minCust+1) + minCust);
+}
+
+var storeForm= document.getElementById('newStoreForm');
+storeForm.addEventListener('submit', handleSubmit);
+function handleSubmit (event){
+  event.preventDefault();
+  var location = event.target.LocationName.value;
+  var minCust = event.target.MinCust.value;
+  var maxCust = event.target.MaxCust.value;
+  var average = event.target.Average.value;
+new SalesPerLocation(location, minCust, maxCust, average);
+  console.log(event);
 }

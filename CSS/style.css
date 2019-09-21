@@ -1,3 +1,62 @@
+/* font-family: 'Mansalva', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Arvo', serif; */
 *{
   text-align: center;
 }
+body{
+  background-image: url('https://www.maxpixel.net/static/photo/2x/Freshwater-Fish-Goldfish-Fish-Scales-Scale-365085.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+}
+div{
+  /* background-color: blue; */
+  position: relative;
+  width:100%;
+  z-index: 0;
+}
+div > h1{
+  position: absolute;
+  z-index: 10;
+  display: block;
+  top: 40%;
+  font-size: 40px;
+  color: white;
+  /* background-color: rgb(0,0,0,.6); */
+  width:100%;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Mansalva', cursive;
+}
+body > h1{
+  font-family: 'Oswald', sans-serif;
+  color:white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+button{
+
+}
+button > a{
+  text-decoration: none;
+  color: black;
+}
+section{
+  width:90%;
+  padding:10px;
+  background-color:rgb(183, 65, 6, .6);
+  margin:auto;
+}
+table{
+  font-family: 'Mansalva', cursive;
+  color:white;
+  width:80%;
+  margin:auto;
+}
+table > tr > th{
+  font-size: 20px;
+  padding:4px;
+}
+
+

@@ -37,31 +37,31 @@ function headerRow(){
     newTR.appendChild(newTH);
   }
   newTH = document.createElement('th');
-  newTH.textContent = 'Daily Total of Cookies';
+  newTH.textContent = 'Daily Total';
   newTR.appendChild(newTH);
   table.appendChild(newTR);
 }
 
 function footerRow(){
   var newTR = document.createElement('tr');
-  var newTD = document.createElement('td');
-  newTD.textContent = 'Totals';
-  newTR.appendChild(newTD);
+  var newTH = document.createElement('th');
+  newTH.textContent = 'Totals';
+  newTR.appendChild(newTH);
   var totalOfTotals = 0;
   for(var i = 0; i<hours.length; i++){
     var counter = 0;
-    newTD = document.createElement('td');
+    newTH = document.createElement('th');
     for(var j = 0; j< SalesPerLocation.all.length; j++){
       var saleCurrentHour = SalesPerLocation.all[j].sales[i];
       counter+=saleCurrentHour;
     }
-    newTD.textContent = `${counter}`;
+    newTH.textContent = `${counter}`;
     totalOfTotals+=counter;
-    newTR.appendChild(newTD);
+    newTR.appendChild(newTH);
   }
-  newTD=document.createElement('td');
-  newTD.textContent = `${totalOfTotals}`;
-  newTR.appendChild(newTD);
+  newTH=document.createElement('th');
+  newTH.textContent = `${totalOfTotals}`;
+  newTR.appendChild(newTH);
   table.appendChild(newTR);
 }
 
@@ -101,12 +101,28 @@ function getRandom(minCust, maxCust){
 
 var storeForm= document.getElementById('newStoreForm');
 storeForm.addEventListener('submit', handleSubmit);
+
 function handleSubmit (event){
   event.preventDefault();
   var location = event.target.LocationName.value;
   var minCust = event.target.MinCust.value;
   var maxCust = event.target.MaxCust.value;
   var average = event.target.Average.value;
-new SalesPerLocation(location, minCust, maxCust, average);
+  compareMinMax(minCust, maxCust, location, average);
+  event.target.LocationName.value=null;
+  event.target.MinCust.value=null;
+  event.target.MaxCust.value=null;
+  event.target.Average.value=null;
   console.log(event);
 }
+function compareMinMax(min, max, location, average){
+  if (min >= max){
+    alert("Invalid input. Minimum Customers must be lower than Maximum Customers.");
+  }
+  else{
+    table.removeChild(table.lastChild);
+    new SalesPerLocation(location, min, max, average);
+    footerRow();
+  }
+}
+

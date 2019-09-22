@@ -2,51 +2,51 @@
 
 <html>
 <head>
+  <title>Pats Location and Sales</title>
+  <link href="CSS/reset.css" rel="stylesheet" type="text/css">
+  <link href="CSS/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Mansalva|Oswald&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-  <img src= "https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/chinook.jpg" alt="Salmon logo" height="50px" width="42px">
-  <h1>
-    Pats Salmon Cookies
-  </h1>
-      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/fish.jpg" alt="Smiley face" height="402" width="402">
-      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/cutter.jpeg">
-      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/fish.jpg">
+  <div>
+    <img src= "./images/fishy_blank_background.png" alt="Salmon logo" width = 80%>
+   <h1>
+    Pats<br> Salmon Cookies
+   </h1>
+  </div>
+
+      <h1>Our Locations with Sales Info</h1>
+      <button><a href="./index.html">Home Page</a></button>
+      <section>
+      <table id="target">
+        
+      </table>
+    </section>
 
   <form id="newStoreForm">
-    <fieldset>
-      <label>Location</label>
-      <input id="LocationName" type="text" required></br>
+        <fieldset>
+          <label>Location</label>
+          <input id="LocationName" type="text" required></br>
+    
+          <label>Minimum Customers per Hour</label>
+          <input id="MinCust" type="number" required></br>
+    
+          <label>Maximum Customers per Hour</label>
+          <input id="MaxCust" type="number" required></br>
+    
+          <label>Average Cookies Purchased by Customers</label>
+          <input id="Average" type="number" required></br>
+    
+          <button value="submit">Create Store</button>
+        </fieldset>
+      </form>
 
-      <label>Minimum Customers per Hour</label>
-      <input id="MinCust" type="number" required></br>
-
-      <label>Maximum Customers per Hour</label>
-      <input id="MaxCust" type="number" required></br>
-
-      <label>Average Cookies Purchased by Customers</label>
-      <input id="Average" type="number" required></br>
-
-      <button value="submit">Create Store</button>
-    </fieldset>
-  </form>
-  <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/frosted-cookie.jpg">
-  <h1>Our Locations with Sales Info</h1>
-  <h2>So you can buy cookies for your family today!
-
-  </h2>
-  <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/family.jpg">
-  <table id="target">
-
-  </table>
-
-  <h1>Hungry for more?</h1>
-  <h2>Get some salmon merch here!</h2>
-  <img src ="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/shirt.jpg">
   <footer>
-      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/salmon.png">
+      <img src="https://raw.githubusercontent.com/codefellows/seattle-201d52/master/class-09/lab/lab-b/assets/salmon.png" alt="a salmon beautiful salmon" width=80%>
   </footer>
-  <script src = "./sales.js"></script>
+  <script src = "./sales.js">
+  </script>
 </body>
 </html>

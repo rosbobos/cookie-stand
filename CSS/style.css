@@ -3,12 +3,18 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Arvo', serif; */
 *{
   text-align: center;
+  font-family: 'Arvo', serif;
+  color:#631f07;
+  font-size: 30px;
+  
 }
 body{
   background-image: url('https://www.maxpixel.net/static/photo/2x/Freshwater-Fish-Goldfish-Fish-Scales-Scale-365085.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   height:100vh;
+  background-color:#d68248;
+  
 }
 div{
   /* background-color: blue; */
@@ -21,9 +27,8 @@ div > h1{
   z-index: 10;
   display: block;
   top: 40%;
-  font-size: 40px;
+  font-size: 50px;
   color: white;
-  /* background-color: rgb(0,0,0,.6); */
   width:100%;
   text-align: center;
   padding: 20px 0;
@@ -31,16 +36,24 @@ div > h1{
 }
 body > h1{
   font-family: 'Oswald', sans-serif;
-  color:white;
-  font-size: 20px;
+  color:#2f170a;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 button{
-
+  background-color: #965d22
 }
 button > a{
   text-decoration: none;
-  color: black;
+  color:#2f170a;
+  padding: 20px 20px;
+}
+label{
+  font-family:'Mansalva', cursive;
+  color:#631f07;
+  font-size:28px;
+  width:80%;
+  margin:auto;
 }
 section{
   width:90%;
@@ -49,14 +62,20 @@ section{
   margin:auto;
 }
 table{
-  font-family: 'Mansalva', cursive;
-  color:white;
+  font-family:'Mansalva', cursive;
+  color:#631f07;
   width:80%;
   margin:auto;
 }
 table > tr > th{
-  font-size: 20px;
+  color:#631f07;
+  font-size: 28px;
   padding:4px;
 }
-
+h2{
+  font-family: 'Arvo', serif;
+  color:#631f07;
+  font-size: 30px;
+  padding: 20px 20px;
+}
 
